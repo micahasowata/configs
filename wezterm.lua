@@ -76,6 +76,8 @@ config.font = wezterm.font("Fira Code")
 
 config.line_height = 1.2
 
+config.disable_default_key_bindings = false
+
 config.leader = {
 	key = "F12",
 }
