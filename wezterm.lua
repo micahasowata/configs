@@ -70,4 +70,8 @@ config.window_background_image_hsb = {
 
 config.text_background_opacity = 0.8
 
+config.font = wezterm.font_with_fallback("Fira Code", "Monospace Argon")
+
+config.line_height = 1.2
+
 return config
