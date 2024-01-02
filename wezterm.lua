@@ -48,4 +48,13 @@ config.colors = {
 	},
 }
 
+config.enable_scroll_bar = true
+
+config.window_padding = {
+	left = 2,
+	right = 2,
+	top = 0,
+	bottom = 0,
+}
+
 return config
