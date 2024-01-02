@@ -208,7 +208,7 @@ config.keys = {
 		mods = "LEADER|SHIFT",
 		action = wezterm.action({
 			CloseCurrentTab = {
-				confirm = true,
+				confirm = false,
 			},
 		}),
 	},
