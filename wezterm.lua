@@ -6,6 +6,8 @@ if wezterm.config_builder then
 	config = wezterm.config_builder()
 end
 
+config.hide_tab_bar_if_only_one_tab = true
+
 config.show_tab_index_in_tab_bar = false
 
 config.colors = {
