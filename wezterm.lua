@@ -6,8 +6,6 @@ if wezterm.config_builder then
 	config = wezterm.config_builder()
 end
 
-config.color_scheme = "zenbones_dark"
-
 config.show_tab_index_in_tab_bar = false
 
 config.colors = {
@@ -60,5 +58,13 @@ config.window_padding = {
 config.inactive_pane_hsb = {
 	saturation = 0.9,
 	brightness = 0.4,
+}
+
+config.window_background_image = "/home/micah/Pictures/bg.jpg"
+
+config.window_background_image_hsb = {
+	brightness = 0.02,
+	hue = 1.0,
+	saturation = 1.0,
 }
 return config
