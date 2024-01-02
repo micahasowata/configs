@@ -67,4 +67,7 @@ config.window_background_image_hsb = {
 	hue = 1.0,
 	saturation = 1.0,
 }
+
+config.text_background_opacity = 0.8
+
 return config
