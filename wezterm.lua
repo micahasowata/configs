@@ -70,8 +70,150 @@ config.window_background_image_hsb = {
 
 config.text_background_opacity = 0.8
 
-config.font = wezterm.font_with_fallback("Fira Code", "Monospace Argon")
+config.font = wezterm.font("Fira Code")
 
 config.line_height = 1.2
+
+config.leader = {
+	key = "F12",
+}
+
+config.keys = {
+	{
+		key = "Tab",
+		mods = "CTRL",
+		action = wezterm.action({
+			ActivateTabRelative = 1,
+		}),
+	},
+	{
+		key = "Tab",
+		mods = "LEADER",
+		action = wezterm.action({
+			ActivateTabRelative = -1,
+		}),
+	},
+	{
+		key = "Enter",
+		mods = "ALT",
+		action = "ToggleFullScreen",
+	},
+	{
+		key = "Insert",
+		mods = "SHIFT",
+		action = wezterm.action({
+			PasteFrom = "Clipboard",
+		}),
+	},
+	{
+		key = "Insert",
+		mods = "SHIFT",
+		action = wezterm.action({
+			PasteFrom = "PrimarySelection",
+		}),
+	},
+	{
+		key = "Insert",
+		mods = "CTRL",
+		action = wezterm.action({
+			CopyTo = "ClipboardAndPrimarySelection",
+		}),
+	},
+	{
+		key = "v",
+		mods = "LEADER",
+		action = wezterm.action({
+			SplitHorizontal = {
+				domain = "CurrentPaneDomain",
+			},
+		}),
+	},
+	{
+		key = "s",
+		mods = "LEADER",
+		action = wezterm.action({
+			SplitVertical = {
+				domain = "CurrentPaneDomain",
+			},
+		}),
+	},
+	{
+		key = "h",
+		mods = "LEADER",
+		action = wezterm.action({
+			ActivatePaneDirection = "Left",
+		}),
+	},
+	{
+		key = "l",
+		mods = "LEADER",
+		action = wezterm.action({
+			ActivatePaneDirection = "Right",
+		}),
+	},
+	{
+		key = "j",
+		mods = "LEADER",
+		action = wezterm.action({
+			ActivatePaneDirection = "Down",
+		}),
+	},
+	{
+		key = "k",
+		mods = "LEADER",
+		action = wezterm.action({
+			ActivatePaneDirection = "Up",
+		}),
+	},
+	{
+		key = "z",
+		mods = "LEADER",
+		action = "TogglePaneZoomState",
+	},
+	{
+		key = "/",
+		mods = "LEADER",
+		action = wezterm.action({
+			Search = {
+				CaseInSensitiveString = "",
+			},
+		}),
+	},
+	{
+		key = "q",
+		mods = "LEADER",
+		action = "QuickSelect",
+	},
+	{
+		key = "c",
+		mods = "LEADER",
+		action = "ShowLauncher",
+	},
+	{
+		key = "r",
+		mods = "LEADER",
+		action = "ReloadConfiguration",
+	},
+	{
+		key = "x",
+		mods = "LEADER",
+		action = wezterm.action({
+			CloseCurrentPane = {
+				confirm = true,
+			},
+		}),
+	},
+	{
+		key = "x",
+		mods = "LEADER|SHIFT",
+		action = wezterm.action({
+			CloseCurrentTab = {
+				confirm = true,
+			},
+		}),
+	},
+}
+
+config.warn_about_missing_glyphs = false
 
 return config
