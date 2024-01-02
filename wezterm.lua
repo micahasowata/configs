@@ -221,4 +221,7 @@ config.keys = {
 config.warn_about_missing_glyphs = false
 
 config.default_cursor_style = "SteadyUnderline"
+
+config.check_for_updates = true
+
 return config
